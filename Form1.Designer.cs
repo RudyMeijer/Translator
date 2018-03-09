@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp4
+﻿namespace Translator
 {
 	partial class Form1
 	{
