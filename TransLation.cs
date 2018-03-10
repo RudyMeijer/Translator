@@ -14,7 +14,6 @@ namespace Translator
 		}
 
 		public string SingleText { get; set; }
-		public List<string> Combo { get; set; }
 		public List<KeyValue> MenuItems { get; set; }
 
 		internal static TransLation Load(string fileName)
@@ -45,5 +44,10 @@ namespace Translator
 
 		[XmlAttribute]public string Key { get; set; }
 		[XmlAttribute] public string Value { get; set; }
+
+		public override string ToString()
+		{
+			return $"{Key} {Value}";
+		}
 	}
 }

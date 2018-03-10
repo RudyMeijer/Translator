@@ -39,12 +39,12 @@
 			this.btnLoad = new System.Windows.Forms.Button();
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.checkBox3 = new System.Windows.Forms.CheckBox();
 			this.checkBox2 = new System.Windows.Forms.CheckBox();
 			this.txtFilename = new System.Windows.Forms.TextBox();
 			this.btnSave = new System.Windows.Forms.Button();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.button1 = new System.Windows.Forms.Button();
 			this.menuStrip2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -142,6 +142,15 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "groupBox1";
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(126, 21);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 48);
+			this.button1.TabIndex = 8;
+			this.button1.Text = "button in group";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
 			// checkBox3
 			// 
 			this.checkBox3.AutoSize = true;
@@ -164,17 +173,17 @@
 			// 
 			// txtFilename
 			// 
-			this.txtFilename.Location = new System.Drawing.Point(102, 55);
+			this.txtFilename.Location = new System.Drawing.Point(264, 102);
 			this.txtFilename.Name = "txtFilename";
 			this.txtFilename.Size = new System.Drawing.Size(100, 22);
 			this.txtFilename.TabIndex = 5;
-			this.txtFilename.Text = "ne";
+			this.txtFilename.Text = "Enter any text";
 			// 
 			// btnSave
 			// 
-			this.btnSave.Location = new System.Drawing.Point(21, 194);
+			this.btnSave.Location = new System.Drawing.Point(289, 54);
 			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(75, 23);
+			this.btnSave.Size = new System.Drawing.Size(75, 24);
 			this.btnSave.TabIndex = 6;
 			this.btnSave.Text = "Save";
 			this.btnSave.UseVisualStyleBackColor = true;
@@ -184,23 +193,18 @@
 			// 
 			this.comboBox1.FormattingEnabled = true;
 			this.comboBox1.Items.AddRange(new object[] {
+            "English",
+            "Nederlands",
+            "German",
             "Ape",
             "Dog",
-            "Bird"});
-			this.comboBox1.Location = new System.Drawing.Point(237, 55);
+            "Brid"});
+			this.comboBox1.Location = new System.Drawing.Point(102, 54);
 			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 24);
+			this.comboBox1.Size = new System.Drawing.Size(129, 24);
 			this.comboBox1.TabIndex = 7;
-			this.comboBox1.Text = "enter any text";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(126, 21);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 48);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "button in group";
-			this.button1.UseVisualStyleBackColor = true;
+			this.comboBox1.Text = "Select language";
+			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// Form1
 			// 
