@@ -17,8 +17,6 @@ namespace Translator
 		{
 			InitializeComponent();
 			comboBox1.SelectedIndex = 1;
-			translation = TransLation.Load("EN");
-
 		}
 
 		public TransLation translation;
@@ -35,7 +33,6 @@ namespace Translator
 		private void distribute(TransLation translation)
 		{
 			Dictionary<string, object> dictionary = GetAllControls(this);
-			//ComboBox comboBox = null;
 			foreach (KeyValue kv in translation.MenuItems)
 			{
 				var text = kv.Value;
