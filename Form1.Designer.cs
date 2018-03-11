@@ -39,14 +39,17 @@
 			this.btnLoad = new System.Windows.Forms.Button();
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnCreate = new System.Windows.Forms.Button();
 			this.checkBox3 = new System.Windows.Forms.CheckBox();
 			this.checkBox2 = new System.Windows.Forms.CheckBox();
 			this.txtFilename = new System.Windows.Forms.TextBox();
 			this.btnSave = new System.Windows.Forms.Button();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.menuStrip2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
+			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip2
@@ -131,7 +134,7 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.button1);
+			this.groupBox1.Controls.Add(this.btnCreate);
 			this.groupBox1.Controls.Add(this.checkBox3);
 			this.groupBox1.Controls.Add(this.checkBox2);
 			this.groupBox1.Controls.Add(this.checkBox1);
@@ -142,15 +145,15 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "groupBox1";
 			// 
-			// button1
+			// btnCreate
 			// 
-			this.button1.Location = new System.Drawing.Point(110, 21);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(91, 75);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "Create dynamic button";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.btnCreate.Location = new System.Drawing.Point(110, 21);
+			this.btnCreate.Name = "btnCreate";
+			this.btnCreate.Size = new System.Drawing.Size(91, 75);
+			this.btnCreate.TabIndex = 8;
+			this.btnCreate.Text = "Create dynamic button";
+			this.btnCreate.UseVisualStyleBackColor = true;
+			this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
 			// 
 			// checkBox3
 			// 
@@ -207,11 +210,29 @@
 			this.comboBox1.Text = "Select language";
 			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+			this.statusStrip1.Location = new System.Drawing.Point(0, 224);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(419, 25);
+			this.statusStrip1.TabIndex = 8;
+			this.statusStrip1.Text = "statusStrip1";
+			// 
+			// toolStripStatusLabel1
+			// 
+			this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+			this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 20);
+			this.toolStripStatusLabel1.Text = "Ready";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(419, 249);
+			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.btnSave);
 			this.Controls.Add(this.txtFilename);
@@ -220,10 +241,13 @@
 			this.Controls.Add(this.menuStrip2);
 			this.Name = "Form1";
 			this.Text = "Form1";
+			this.MouseEnter += new System.EventHandler(this.Form1_MouseEnter);
 			this.menuStrip2.ResumeLayout(false);
 			this.menuStrip2.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -247,7 +271,9 @@
 		private System.Windows.Forms.TextBox txtFilename;
 		private System.Windows.Forms.Button btnSave;
 		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnCreate;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
 	}
 }
 

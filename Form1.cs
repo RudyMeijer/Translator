@@ -21,19 +21,11 @@ namespace Translator
 		public Form1()
 		{
 			InitializeComponent();
+			SetStatus(toolStripStatusLabel1);
 			translation = TransLation.Load("NE");
 			comboBox1.SelectedIndex = 1;
 		}
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			if (!InProcess)
-			{
-				InProcess = true;
-				btnLoad_Click(null, null);
-				InProcess = false;
-			}
-		}
-
+		#region FORM EVENTS
 		private void btnLoad_Click(object sender, EventArgs e)
 		{
 			distribute(TransLation.Load(comboBox1.Text));
@@ -45,6 +37,28 @@ namespace Translator
 			translation.Save(comboBox1.Text);
 		}
 
+		private void btnCreate_Click(object sender, EventArgs e)
+		{
+			var b = new Button() { Name = $"btnDynamic{++idx}", Text = $"Dynamic{idx}" };
+			b.Location = new Point(txtFilename.Location.X, txtFilename.Location.Y + idx * 18);
+			this.Controls.Add(b);
+		}
+
+		private void Form1_MouseEnter(object sender, EventArgs e)
+		{
+			Status("");
+		}
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (!InProcess)
+			{
+				InProcess = true;
+				btnLoad_Click(null, null);
+				InProcess = false;
+			}
+		}
+		#endregion
 		private void distribute(TransLation translation)
 		{
 			var dictionary = GetAllControls(FindForm());
@@ -73,6 +87,7 @@ namespace Translator
 						continue;
 					}
 				}
+				else if (!kv.Key.Contains("Dynamic")) Status($"{kv.Key} not on form.");
 		}
 
 		/// <summary>
@@ -127,13 +142,6 @@ namespace Translator
 						menuItems.Add(c.Name, c);
 				}
 			return menuItems;
-		}
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-			var b = new Button() { Name = $"btnDynamic{++idx}", Text = $"Dynamic{idx}" };
-			b.Location = new Point(txtFilename.Location.X, txtFilename.Location.Y + idx * 18);
-			this.Controls.Add(b);
 		}
 	}
 }

@@ -13,7 +13,7 @@ namespace Translator
 			SingleText = "Set Default";
 			MenuItems = new List<KeyValue>
 			{
-				new KeyValue("Form1", "No language file found.")
+				new KeyValue("Form1", "Language not available.")
 			};
 		}
 
