@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransLation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleText>Set Default</SingleText>
+  <MenuItems>
+    <KeyValue Key="Form1" Value="De Vertaler" />
+    <KeyValue Key="button1" Value="Creer dynamisch knopjes" />
+    <KeyValue Key="checkBox3" Value="vinkje 3" />
+    <KeyValue Key="checkBox2" Value="vinkje 2" />
+    <KeyValue Key="checkBox1" Value="vinkje 1" />
+    <KeyValue Key="comboBox1" Value="English;Nederlands;German;Aap;Noot;Mies" />
+    <KeyValue Key="btnSave" Value="Bewaar" />
+    <KeyValue Key="txtFilename" Value="invoer tekst" />
+    <KeyValue Key="groupBox1" Value="groepje" />
+    <KeyValue Key="btnLoad" Value="Laad" />
+    <KeyValue Key="menuStrip2" Value="menuStrip2" />
+    <KeyValue Key="btnDynamic1" Value="Dynamisch1" />
+    <KeyValue Key="btnDynamic2" Value="Dynamisch2" />
+    <KeyValue Key="btnDynamic3" Value="Dynamisch3" />
+    <KeyValue Key="btnDynamic4" Value="Dynamisch4" />
+    <KeyValue Key="fileToolStripMenuItem" Value="Bestand" />
+    <KeyValue Key="newToolStripMenuItem" Value="Nieuw" />
+    <KeyValue Key="openToolStripMenuItem" Value="Open" />
+    <KeyValue Key="saveToolStripMenuItem" Value="Bewaar" />
+    <KeyValue Key="saveAsToolStripMenuItem" Value="Bewaar als" />
+    <KeyValue Key="exitToolStripMenuItem" Value="Einde" />
+    <KeyValue Key="optionsToolStripMenuItem" Value="Opties" />
+  </MenuItems>
+</TransLation>

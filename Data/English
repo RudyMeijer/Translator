@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransLation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleText>Set Default</SingleText>
+  <MenuItems>
+    <KeyValue Key="Form1" Value="The Translator" />
+    <KeyValue Key="button1" Value="Create dynamic button" />
+    <KeyValue Key="checkBox3" Value="checkBox3" />
+    <KeyValue Key="checkBox2" Value="checkBox2" />
+    <KeyValue Key="checkBox1" Value="checkBox1" />
+    <KeyValue Key="comboBox1" Value="English;Nederlands;German;Ape;Dog;Brid" />
+    <KeyValue Key="btnSave" Value="Save" />
+    <KeyValue Key="txtFilename" Value="Enter any text" />
+    <KeyValue Key="groupBox1" Value="groupBox1" />
+    <KeyValue Key="btnLoad" Value="Load" />
+    <KeyValue Key="menuStrip2" Value="menuStrip2" />
+    <KeyValue Key="btnDynamic1" Value="Dynamic1" />
+    <KeyValue Key="btnDynamic2" Value="Dynamic2" />
+    <KeyValue Key="fileToolStripMenuItem" Value="File" />
+    <KeyValue Key="newToolStripMenuItem" Value="New" />
+    <KeyValue Key="openToolStripMenuItem" Value="Open" />
+    <KeyValue Key="saveToolStripMenuItem" Value="Save" />
+    <KeyValue Key="saveAsToolStripMenuItem" Value="Save As" />
+    <KeyValue Key="exitToolStripMenuItem" Value="Exit" />
+    <KeyValue Key="optionsToolStripMenuItem" Value="Options" />
+  </MenuItems>
+</TransLation>

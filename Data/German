@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TransLation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleText>Set Default</SingleText>
+  <MenuItems>
+    <KeyValue Key="Form1" Value="Die  Übersetzer" />
+    <KeyValue Key="button1" Value="Entwerfen aktiv Knopf" />
+    <KeyValue Key="checkBox3" Value="Vinke 3" />
+    <KeyValue Key="checkBox2" Value="Vinke 2" />
+    <KeyValue Key="checkBox1" Value="Vinke 1" />
+    <KeyValue Key="comboBox1" Value="English;Nederlands;German;Affe;Hunde;Vöglein" />
+    <KeyValue Key="btnSave" Value="Speiger" />
+    <KeyValue Key="txtFilename" Value="gebe tekst ein" />
+    <KeyValue Key="groupBox1" Value="Gruppe" />
+    <KeyValue Key="btnLoad" Value="öffnen" />
+    <KeyValue Key="menuStrip2" Value="menuStrip2" />
+    <KeyValue Key="btnDynamic1" Value="Aktiv 1" />
+    <KeyValue Key="btnDynamic2" Value="Aktiv 2" />
+    <KeyValue Key="btnDynamic3" Value="Aktiv 3" />
+    <KeyValue Key="btnDynamic4" Value="Aktiv 4" />
+    <KeyValue Key="fileToolStripMenuItem" Value="Datei" />
+    <KeyValue Key="newToolStripMenuItem" Value="Neu" />
+    <KeyValue Key="openToolStripMenuItem" Value="öffnen" />
+    <KeyValue Key="saveToolStripMenuItem" Value="Speichern" />
+    <KeyValue Key="saveAsToolStripMenuItem" Value="Speichern unter" />
+    <KeyValue Key="exitToolStripMenuItem" Value="Beenden" />
+    <KeyValue Key="optionsToolStripMenuItem" Value="Optione" />
+  </MenuItems>
+</TransLation>

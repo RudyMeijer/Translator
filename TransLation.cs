@@ -18,6 +18,7 @@ namespace Translator
 		}
 
 		public string SingleText { get; set; }
+
 		public List<KeyValue> MenuItems { get; set; }
 
 		internal static TransLation Load(string fileName)
