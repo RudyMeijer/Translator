@@ -111,7 +111,7 @@
 			// 
 			// btnLoad
 			// 
-			this.btnLoad.Location = new System.Drawing.Point(21, 54);
+			this.btnLoad.Location = new System.Drawing.Point(21, 72);
 			this.btnLoad.Name = "btnLoad";
 			this.btnLoad.Size = new System.Drawing.Size(75, 23);
 			this.btnLoad.TabIndex = 2;
@@ -135,7 +135,7 @@
 			this.groupBox1.Controls.Add(this.checkBox3);
 			this.groupBox1.Controls.Add(this.checkBox2);
 			this.groupBox1.Controls.Add(this.checkBox1);
-			this.groupBox1.Location = new System.Drawing.Point(21, 83);
+			this.groupBox1.Location = new System.Drawing.Point(21, 101);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(220, 105);
 			this.groupBox1.TabIndex = 4;
@@ -144,12 +144,13 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(126, 21);
+			this.button1.Location = new System.Drawing.Point(110, 21);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 48);
+			this.button1.Size = new System.Drawing.Size(91, 75);
 			this.button1.TabIndex = 8;
-			this.button1.Text = "button in group";
+			this.button1.Text = "Create dynamic button";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// checkBox3
 			// 
@@ -173,7 +174,7 @@
 			// 
 			// txtFilename
 			// 
-			this.txtFilename.Location = new System.Drawing.Point(264, 102);
+			this.txtFilename.Location = new System.Drawing.Point(264, 120);
 			this.txtFilename.Name = "txtFilename";
 			this.txtFilename.Size = new System.Drawing.Size(100, 22);
 			this.txtFilename.TabIndex = 5;
@@ -181,7 +182,7 @@
 			// 
 			// btnSave
 			// 
-			this.btnSave.Location = new System.Drawing.Point(289, 54);
+			this.btnSave.Location = new System.Drawing.Point(289, 72);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(75, 24);
 			this.btnSave.TabIndex = 6;
@@ -199,7 +200,7 @@
             "Ape",
             "Dog",
             "Brid"});
-			this.comboBox1.Location = new System.Drawing.Point(102, 54);
+			this.comboBox1.Location = new System.Drawing.Point(102, 72);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(129, 24);
 			this.comboBox1.TabIndex = 7;

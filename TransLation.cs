@@ -11,6 +11,10 @@ namespace Translator
 		public TransLation()
 		{
 			SingleText = "Set Default";
+			MenuItems = new List<KeyValue>
+			{
+				new KeyValue("Form1", "No language file found.")
+			};
 		}
 
 		public string SingleText { get; set; }

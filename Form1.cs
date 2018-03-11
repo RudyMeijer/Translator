@@ -13,59 +13,66 @@ namespace Translator
 {
 	public partial class Form1 : Form
 	{
+		#region FIELDS
+		public TransLation translation;
+		public bool InProcess;
+		private int idx;
+		#endregion
 		public Form1()
 		{
 			InitializeComponent();
+			translation = TransLation.Load("NE");
 			comboBox1.SelectedIndex = 1;
 		}
-
-		public TransLation translation;
-
-		public bool InProcess { get; private set; }
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (!InProcess)
+			{
+				InProcess = true;
+				btnLoad_Click(null, null);
+				InProcess = false;
+			}
+		}
 
 		private void btnLoad_Click(object sender, EventArgs e)
 		{
-			translation = TransLation.Load(comboBox1.Text);
-			if (translation.MenuItems != null)
-				distribute(translation);
-		}
-
-		private void distribute(TransLation translation)
-		{
-			Dictionary<string, object> dictionary = GetAllControls(this);
-			foreach (KeyValue kv in translation.MenuItems)
-			{
-				var text = kv.Value;
-				var c = dictionary[kv.Key];
-				if (c is ComboBox)
-				{
-					var comboBox = c as ComboBox;
-					var subtext = text.Split(';');
-					var idx = comboBox.SelectedIndex;
-					comboBox.Items.Clear();
-					comboBox.Items.AddRange(subtext);
-					comboBox.SelectedIndex = idx;
-				}
-				else if (c is Control)
-				{
-					(c as Control).Text = text;
-				}
-				else if (c is ToolStripMenuItem)
-				{
-					(c as ToolStripMenuItem).Text = text;
-				}
-				else
-				{
-					continue;
-				}
-
-			}
+			distribute(TransLation.Load(comboBox1.Text));
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			translation.MenuItems = GetFormControls(this);
 			translation.Save(comboBox1.Text);
+		}
+
+		private void distribute(TransLation translation)
+		{
+			var dictionary = GetAllControls(FindForm());
+			foreach (KeyValue kv in translation.MenuItems) if (dictionary.ContainsKey(kv.Key))
+				{
+					var text = kv.Value;
+					var control = dictionary[kv.Key];
+					if (control is ComboBox)
+					{
+						var comboBox = control as ComboBox;
+						var save = comboBox.SelectedIndex;
+						comboBox.Items.Clear();
+						comboBox.Items.AddRange(text.Split(';'));
+						comboBox.SelectedIndex = save;
+					}
+					else if (control is Control)
+					{
+						(control as Control).Text = text;
+					}
+					else if (control is ToolStripMenuItem)
+					{
+						(control as ToolStripMenuItem).Text = text;
+					}
+					else
+					{
+						continue;
+					}
+				}
 		}
 
 		/// <summary>
@@ -78,7 +85,7 @@ namespace Translator
 		private List<KeyValue> GetFormControls(Form form)
 		{
 			var list = new List<KeyValue>();
-			list.Add( new KeyValue(form.Name, form.Text) );
+			list.Add(new KeyValue(form.Name, form.Text));
 
 			foreach (var c in GetAll(form))
 			{
@@ -111,7 +118,7 @@ namespace Translator
 			var menuItems = new Dictionary<string, object>();
 			menuItems.Add(form.Name, form);
 
-			foreach (var c in GetAll(form))menuItems.Add(c.Name, c);
+			foreach (var c in GetAll(form)) menuItems.Add(c.Name, c);
 			foreach (MenuStrip m in GetAll(form, typeof(MenuStrip)))
 				foreach (ToolStripMenuItem item in m.Items)
 				{
@@ -122,14 +129,11 @@ namespace Translator
 			return menuItems;
 		}
 
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
-			if (!InProcess)
-			{
-				InProcess = true;
-				btnLoad_Click(null, null);
-				InProcess = false;
-			}
+			var b = new Button() { Name = $"btnDynamic{++idx}", Text = $"Dynamic{idx}" };
+			b.Location = new Point(txtFilename.Location.X, txtFilename.Location.Y + idx * 18);
+			this.Controls.Add(b);
 		}
 	}
 }
