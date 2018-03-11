@@ -3,7 +3,7 @@
   <SingleText>Set Default</SingleText>
   <MenuItems>
     <KeyValue Key="Form1" Value="De Vertaler" />
-    <KeyValue Key="button1" Value="Creer dynamisch knopjes" />
+    <KeyValue Key="btnCreate" Value="Creer dynamisch knopjes" />
     <KeyValue Key="checkBox3" Value="vinkje 3" />
     <KeyValue Key="checkBox2" Value="vinkje 2" />
     <KeyValue Key="checkBox1" Value="vinkje 1" />

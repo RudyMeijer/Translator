@@ -72,9 +72,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="bin\Debug\English" />
-    <None Include="bin\Debug\German" />
-    <None Include="bin\Debug\Nederlands" />
     <None Include="Data\English" />
     <None Include="Data\German" />
     <None Include="Data\Nederlands" />

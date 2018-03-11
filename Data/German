@@ -3,7 +3,7 @@
   <SingleText>Set Default</SingleText>
   <MenuItems>
     <KeyValue Key="Form1" Value="Die  Übersetzer" />
-    <KeyValue Key="button1" Value="Entwerfen aktiv Knopf" />
+    <KeyValue Key="btnCreate" Value="Entwerfen aktiv Knopf" />
     <KeyValue Key="checkBox3" Value="Vinke 3" />
     <KeyValue Key="checkBox2" Value="Vinke 2" />
     <KeyValue Key="checkBox1" Value="Vinke 1" />
