@@ -21,15 +21,13 @@ namespace Translator
 		public Form1()
 		{
 			InitializeComponent();
-			SetStatus(toolStripStatusLabel1);
-			translation = TransLation.Load("NE");
+			InitStatus(toolStripStatusLabel1);
+			translation = new TransLation();
+			// Default language is Nederlands.
 			comboBox1.SelectedIndex = 1;
 		}
 		#region FORM EVENTS
-		private void btnLoad_Click(object sender, EventArgs e)
-		{
-			distribute(TransLation.Load(comboBox1.Text));
-		}
+		private void btnLoad_Click(object sender, EventArgs e) => Dispatch(TransLation.Load(fileName: comboBox1.Text));
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
@@ -59,7 +57,8 @@ namespace Translator
 			}
 		}
 		#endregion
-		private void distribute(TransLation translation)
+		#region METHODES
+		private void Dispatch(TransLation translation)
 		{
 			var dictionary = GetAllControls(FindForm());
 			foreach (KeyValue kv in translation.MenuItems) if (dictionary.ContainsKey(kv.Key))
@@ -100,26 +99,15 @@ namespace Translator
 		private List<KeyValue> GetFormControls(Form form)
 		{
 			var list = new List<KeyValue>();
-			list.Add(new KeyValue(form.Name, form.Text));
-
-			foreach (var c in GetAll(form))
+			foreach (var kv in GetAllControls(form))
 			{
-				var text = c.Text;
-				if (c is ComboBox)
-				{
-					text = "";
-					foreach (string item in (c as ComboBox).Items) text += $";{item}";
-					text = text.TrimStart(';');
-				}
-				list.Add(new KeyValue(c.Name, text));
+				var control = kv.Value;
+				var text = "no text";
+				if (control is ToolStripMenuItem) text = (control as ToolStripMenuItem).Text;
+				else if (control is ComboBox) text = String.Join(";", (control as ComboBox).Items.Cast<string>());
+				else if (control is Control) text = (control as Control).Text;
+				list.Add(new KeyValue(kv.Key, text));
 			}
-			foreach (MenuStrip menu in GetAll(form, typeof(MenuStrip)))
-				foreach (ToolStripMenuItem item in menu.Items)
-				{
-					list.Add(new KeyValue(item.Name, item.Text));
-					foreach (ToolStripMenuItem down in item.DropDownItems)
-						list.Add(new KeyValue(down.Name, down.Text));
-				}
 			return list;
 		}
 
@@ -143,5 +131,6 @@ namespace Translator
 				}
 			return menuItems;
 		}
+		#endregion
 	}
 }

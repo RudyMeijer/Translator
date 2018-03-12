@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace Translator
@@ -17,15 +15,19 @@ namespace Translator
 			};
 		}
 
+		#region PROPERTIES
 		public string SingleText { get; set; }
 
 		public List<KeyValue> MenuItems { get; set; }
-
+		#endregion
+		#region METHODES
 		internal static TransLation Load(string fileName)
 		{
 			var transLation = new TransLation(); // Load defaults.
 			if (File.Exists(fileName)) using (TextReader reader = new StreamReader(fileName))
+				{
 					transLation = new XmlSerializer(typeof(TransLation)).Deserialize(reader) as TransLation;
+				}
 			return transLation;
 		}
 
@@ -36,6 +38,7 @@ namespace Translator
 				new XmlSerializer(typeof(TransLation)).Serialize(writer, this);
 			}
 		}
+		#endregion
 	}
 	public class KeyValue
 	{
@@ -47,7 +50,8 @@ namespace Translator
 			this.Value = value;
 		}
 
-		[XmlAttribute]public string Key { get; set; }
+		[XmlAttribute] public string Key { get; set; }
+
 		[XmlAttribute] public string Value { get; set; }
 
 		public override string ToString()
