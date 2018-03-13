@@ -21,7 +21,7 @@ namespace Translator
 		public Form1()
 		{
 			InitializeComponent();
-			InitStatus(toolStripStatusLabel1);
+			MyLib.My.InitStatus(toolStripStatusLabel1);
 			translation = new TransLation();
 			// Default language is Nederlands.
 			comboBox1.SelectedIndex = 1;
