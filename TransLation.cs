@@ -6,7 +6,9 @@ namespace Translator
 {
 	public class TransLation
 	{
-		public TransLation()
+        private static string thisFileName = "Data\\English.xml";
+
+        public TransLation()
 		{
 			SingleText = "Set Default";
 			MenuItems = new List<KeyValue>
@@ -23,6 +25,7 @@ namespace Translator
 		#region METHODES
 		internal static TransLation Load(string fileName)
 		{
+            thisFileName = fileName;
 			var transLation = new TransLation(); // Load defaults.
 			if (File.Exists(fileName)) using (TextReader reader = new StreamReader(fileName))
 				{
@@ -31,9 +34,9 @@ namespace Translator
 			return transLation;
 		}
 
-		internal void Save(string fileName)
+		internal void Save()
 		{
-			using (var writer = new StreamWriter(fileName))
+			using (var writer = new StreamWriter(thisFileName))
 			{
 				new XmlSerializer(typeof(TransLation)).Serialize(writer, this);
 			}

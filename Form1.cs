@@ -23,16 +23,16 @@ namespace Translator
 			InitializeComponent();
 			MyLib.My.InitStatus(toolStripStatusLabel1);
 			translation = new TransLation();
-			// Default language is Nederlands.
-			comboBox1.SelectedIndex = 1;
+			// Set default language to English.
+			comboBox1.SelectedIndex = 0;
 		}
 		#region FORM EVENTS
-		private void btnLoad_Click(object sender, EventArgs e) => Dispatch(TransLation.Load(fileName: comboBox1.Text));
+		private void btnLoad_Click(object sender, EventArgs e) => Dispatch(TransLation.Load($"Data\\{comboBox1.Text}.xml"));
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			translation.MenuItems = GetFormControls(this);
-			translation.Save(comboBox1.Text);
+			translation.Save();
 		}
 
 		private void btnCreate_Click(object sender, EventArgs e)

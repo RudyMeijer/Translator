@@ -7,6 +7,7 @@
     <KeyValue Key="checkBox3" Value="checkBox3" />
     <KeyValue Key="checkBox2" Value="checkBox2" />
     <KeyValue Key="checkBox1" Value="checkBox1" />
+    <KeyValue Key="statusStrip1" Value="statusStrip1" />
     <KeyValue Key="comboBox1" Value="English;Nederlands;German;Ape;Dog;Brid" />
     <KeyValue Key="btnSave" Value="Save" />
     <KeyValue Key="txtFilename" Value="Enter any text" />
@@ -15,8 +16,6 @@
     <KeyValue Key="menuStrip2" Value="menuStrip2" />
     <KeyValue Key="btnDynamic1" Value="Dynamic1" />
     <KeyValue Key="btnDynamic2" Value="Dynamic2" />
-    <KeyValue Key="btnDynamic3" Value="Dynamic3" />
-    <KeyValue Key="btnDynamic4" Value="Dynamic4" />
     <KeyValue Key="fileToolStripMenuItem" Value="File" />
     <KeyValue Key="newToolStripMenuItem" Value="New" />
     <KeyValue Key="openToolStripMenuItem" Value="Open" />
