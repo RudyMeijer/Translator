@@ -25,4 +25,7 @@
     <KeyValue Key="exitToolStripMenuItem" Value="Beenden" />
     <KeyValue Key="optionsToolStripMenuItem" Value="Optione" />
   </MenuItems>
+  <Messages>
+    <KeyValue Key="User has changed {0}." Value="Gebrauger has {0} modifisiert." />
+  </Messages>
 </TransLation>

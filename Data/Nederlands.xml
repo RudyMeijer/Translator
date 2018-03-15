@@ -22,4 +22,7 @@
     <KeyValue Key="exitToolStripMenuItem" Value="Einde" />
     <KeyValue Key="optionsToolStripMenuItem" Value="Opties" />
   </MenuItems>
+  <Messages>
+    <KeyValue Key="User has changed {0}." Value="Gebruiker wijzigt {0}." />
+  </Messages>
 </TransLation>
