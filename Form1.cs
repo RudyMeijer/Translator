@@ -137,7 +137,7 @@ namespace Translator
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             var name = (sender as CheckBox).Text;
-            Status(translation.MSG("User has changed {0}.", name));
+            Status(translation.Message("User has changed {0}.", name));
         }
     }
 }

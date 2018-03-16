@@ -4,9 +4,9 @@
   <MenuItems>
     <KeyValue Key="Form1" Value="Die  Übersetzer" />
     <KeyValue Key="btnCreate" Value="Entwerfen aktiv Knopf" />
-    <KeyValue Key="checkBox3" Value="Vinke 3" />
-    <KeyValue Key="checkBox2" Value="Vinke 2" />
-    <KeyValue Key="checkBox1" Value="Vinke 1" />
+    <KeyValue Key="checkBox3" Value="Kästchen 3" />
+    <KeyValue Key="checkBox2" Value="Kästchen 2" />
+    <KeyValue Key="checkBox1" Value="Kästchen 1" />
     <KeyValue Key="comboBox1" Value="English;Nederlands;German;Affe;Hunde;Vöglein" />
     <KeyValue Key="btnSave" Value="Speiger" />
     <KeyValue Key="txtFilename" Value="gebe tekst ein" />
@@ -26,6 +26,6 @@
     <KeyValue Key="optionsToolStripMenuItem" Value="Optione" />
   </MenuItems>
   <Messages>
-    <KeyValue Key="User has changed {0}." Value="Gebrauger has {0} modifisiert." />
+    <KeyValue Key="User has changed {0}." Value="Benutzer hat {0} geändert." />
   </Messages>
 </TransLation>

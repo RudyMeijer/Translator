@@ -42,7 +42,7 @@ namespace Translator
             }
         }
 
-        internal string MSG(string format, params object[] args)
+        internal string Message(string format, params object[] args)
         {
             var idx = Messages.FindIndex(x => x.Key == format);
             if (idx == -1)
