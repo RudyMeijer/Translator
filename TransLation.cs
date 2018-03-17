@@ -18,7 +18,6 @@ namespace Translator
 
         #region PROPERTIES
         public string SingleText { get; set; }
-
         public List<KeyValue> MenuItems { get; set; }
         public List<KeyValue> Messages { get; set; }
         #endregion

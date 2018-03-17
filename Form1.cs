@@ -61,7 +61,7 @@ namespace Translator
         private void Dispatch(TransLation translation)
         {
             this.translation = translation;
-            var dictionary = GetAllControls(FindForm());
+            var dictionary = GetAllControls(this);
             foreach (KeyValue kv in translation.MenuItems) if (dictionary.ContainsKey(kv.Key))
                 {
                     var text = kv.Value;
