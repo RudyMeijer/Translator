@@ -7,24 +7,20 @@ namespace Translator
 {
     public class TransLation
     {
-        private static string thisFileName = "Data\\English.xml";
-
+        #region CONSTRUCTOR
         public TransLation()
         {
-            SingleText = "Set Default";
             MenuItems = new List<KeyValue>() { new KeyValue("Form1", "Language not available.") };
             Messages = new List<KeyValue>();
         }
-
+        #endregion
         #region PROPERTIES
-        public string SingleText { get; set; }
         public List<KeyValue> MenuItems { get; set; }
         public List<KeyValue> Messages { get; set; }
         #endregion
         #region METHODES
         internal static TransLation Load(string fileName)
         {
-            thisFileName = fileName;
             var transLation = new TransLation(); // Load defaults.
             if (File.Exists(fileName)) using (TextReader reader = new StreamReader(fileName))
                 {
