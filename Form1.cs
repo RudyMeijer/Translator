@@ -32,7 +32,7 @@ namespace Translator
         private void btnSave_Click(object sender, EventArgs e)
         {
             translation.MenuItems = GetFormControls(this);
-            translation.Save();
+            translation.Save($"Data\\{comboBox1.Text}.xml");
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -55,6 +55,11 @@ namespace Translator
                 btnLoad_Click(null, null);
                 InProcess = false;
             }
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            var name = (sender as CheckBox).Text;
+            Status(translation.Message("User has changed {0}.", name));
         }
         #endregion
         #region METHODES
@@ -134,10 +139,5 @@ namespace Translator
         }
         #endregion
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            var name = (sender as CheckBox).Text;
-            Status(translation.Message("User has changed {0}.", name));
-        }
     }
 }

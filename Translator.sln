@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator", "Translator.csproj", "{9C8BC973-21D8-4E5C-A5F5-EBC5B90F5609}"
+	ProjectSection(ProjectDependencies) = postProject
+		{02B95A35-AA86-49EE-B9A2-85BED81A189A} = {02B95A35-AA86-49EE-B9A2-85BED81A189A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My", "..\My\My\My.csproj", "{02B95A35-AA86-49EE-B9A2-85BED81A189A}"
 EndProject

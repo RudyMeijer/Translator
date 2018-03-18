@@ -33,9 +33,9 @@ namespace Translator
             return transLation;
         }
 
-        internal void Save()
+        internal void Save(string fileName)
         {
-            using (var writer = new StreamWriter(thisFileName))
+            using (var writer = new StreamWriter(fileName))
             {
                 new XmlSerializer(typeof(TransLation)).Serialize(writer, this);
             }
