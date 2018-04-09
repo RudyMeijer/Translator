@@ -23,6 +23,7 @@ namespace Translator
         {
             InitializeComponent();
             InitStatus(toolStripStatusLabel1);
+            NewForm2();
             // Set default language to English.
             comboBox1.SelectedIndex = 0;
         }
@@ -65,16 +66,28 @@ namespace Translator
             // Add a new form to this form.
             if ((sender as CheckBox) == checkBox3)
             {
-                var f = new Form();
-                var b = new Button();
-                f.Name = "Form2";
-                b.Name = "Button2";
-                f.Text = "Configuration form";
-                b.Text = "my button";
-                f.Controls.Add(b);
+                //Form f;
+                //if (OwnedForms.Length > 0)
+                //    f = OwnedForms[0];
+                //else
+                var f = NewForm2();
                 f.Show();
-                this.AddOwnedForm(f);
             }
+        }
+
+        private Form NewForm2()
+        {
+            if (OwnedForms.Length > 0) return OwnedForms[0];
+
+            var f = new Form();
+            var b = new Button();
+            f.Name = "Form2";
+            b.Name = "Button2";
+            f.Text = "Configuration form";
+            b.Text = "my button";
+            f.Controls.Add(b);
+            AddOwnedForm(f);
+            return f;
         }
         #endregion
         #region METHODES
@@ -82,6 +95,11 @@ namespace Translator
         {
             this.translation = translation;
             var dictionary = GetAllControls(this);
+            foreach (var form in this.OwnedForms)
+            {
+                var dic2 = GetAllControls(form);
+                dic2.ToList().ForEach(x => dictionary.Add(x.Key, x.Value));
+            }
             foreach (KeyValue kv in translation.MenuItems) if (dictionary.ContainsKey(kv.Key))
                 {
                     var text = kv.Value;
