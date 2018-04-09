@@ -17,12 +17,12 @@ namespace Translator
         public TransLation translation;
         public bool InProcess;
         private int idx;
+        private Form f;
         #endregion
         public Form1()
         {
             InitializeComponent();
             InitStatus(toolStripStatusLabel1);
-            translation = new TransLation();
             // Set default language to English.
             comboBox1.SelectedIndex = 0;
         }
@@ -32,7 +32,8 @@ namespace Translator
         private void btnSave_Click(object sender, EventArgs e)
         {
             translation.MenuItems = GetFormControls(this);
-            translation.Save($"Data\\{comboBox1.Text}.xml");
+            foreach (var form in this.OwnedForms) translation.MenuItems.AddRange(GetFormControls(form));
+            translation.Save($"Language\\{comboBox1.Text}.xml");
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -60,6 +61,20 @@ namespace Translator
         {
             var name = (sender as CheckBox).Text;
             Status(translation.Message("User has changed {0}.", name));
+            //
+            // Add a new form to this form.
+            if ((sender as CheckBox) == checkBox3)
+            {
+                var f = new Form();
+                var b = new Button();
+                f.Name = "Form2";
+                b.Name = "Button2";
+                f.Text = "Configuration form";
+                b.Text = "my button";
+                f.Controls.Add(b);
+                f.Show();
+                this.AddOwnedForm(f);
+            }
         }
         #endregion
         #region METHODES
