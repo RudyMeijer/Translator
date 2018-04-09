@@ -59,7 +59,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransLation.cs" />
-    <Content Include="Data\Editor\updated.xsl" />
+    <Content Include="Language\Editor\updated.xsl" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,15 +73,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Content Include="Data\Editor\Edit.xsl" />
-    <Content Include="Data\Editor\EditTool.asp" />
-    <Content Include="Data\English.xml">
+    <Content Include="Language\Editor\Edit.xsl" />
+    <Content Include="Language\Editor\EditTool.asp" />
+    <Content Include="Language\English.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\German.xml">
+    <Content Include="Language\German.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Nederlands.xml">
+    <Content Include="Language\Nederlands.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\Settings.settings">

@@ -27,7 +27,7 @@ namespace Translator
             comboBox1.SelectedIndex = 0;
         }
         #region FORM EVENTS
-        private void btnLoad_Click(object sender, EventArgs e) => Dispatch(TransLation.Load($"Data\\{comboBox1.Text}.xml"));
+        private void btnLoad_Click(object sender, EventArgs e) => Dispatch(TransLation.Load($"Language\\{comboBox1.Text}.xml"));
 
         private void btnSave_Click(object sender, EventArgs e)
         {
