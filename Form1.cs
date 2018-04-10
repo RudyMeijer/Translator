@@ -66,10 +66,6 @@ namespace Translator
             // Add a new form to this form.
             if ((sender as CheckBox) == checkBox3)
             {
-                //Form f;
-                //if (OwnedForms.Length > 0)
-                //    f = OwnedForms[0];
-                //else
                 var f = NewForm2();
                 f.Show();
             }
